@@ -1,13 +1,14 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认。
+本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 38 个仓库。
 
 ## 组织边界
 
 `Business-Unit-for-Gaokao` 承载高考志愿填报、数据采集、知识库、咨询交付、线上服务和相关部署编排。
 
 - 具体业务代码、业务数据资产、业务专属知识库：留在本组织。
-- 通用平台底座、clone-bot、codegen-bot：归 `Business-Unit-for-Platform`。
+- 通用平台底座、跨 BU clone-bot 和通用 codegen 能力：归 `Business-Unit-for-Platform`。
+- 高考业务专用工具和脚本：留在本组织；若未来抽象为通用平台能力，再迁移到 `Business-Unit-for-Platform`。
 - 集团级战略、组合管理、制度和跨 BU 治理：归 `President-Office`。
 
 ## 开发 / 部署分离原则
@@ -37,6 +38,7 @@
 | `pay` | private | 高考业务支付相关服务 |
 | `infromation` | private | 高考业务信息资料仓库（现有仓库名保留） |
 | `gaokao-tool` | private | 高考工具类仓库 |
+| `codegen-bot` | public | 高考业务代码生成辅助脚本 |
 | `gaokao-zhiyuan-consulting-system-open` | private | 高考志愿咨询系统开源版相关资产 |
 | `python_for_gaokao` | private | 高考 Python 工具 / 脚本资产 |
 | `Front_Node_Code` | private | 前端 / Node 相关遗留或辅助资产 |
@@ -50,6 +52,8 @@
 | `gaokao-universities-data` | private | 全国高校基础数据库、详情采集器、小红书内容生成器 |
 | `sunshine-gaokao-scraper` | public | 阳光高考专业信息爬虫 |
 | `gaokao-xuezhi-crawler` | public | 学职 / 相关数据爬取 |
+| `xuezhi-gaokao-crawler` | public | Legacy CHSI 学职爬虫；从 `FutureTechQuant` 迁移 |
+| `gaokao-collection` | public | 高考信息收集脚本 |
 | `ai-gaokao-jobs-china` | public | 高考专业 AI 工作替代率 |
 | `gaokao-salary` | public | 高考专业薪资 |
 | `gaokao-plans-crawler` | public | 招生计划相关爬虫 |
@@ -71,7 +75,7 @@
 
 | Repository | Status | Notes |
 | --- | --- | --- |
-| `xuezhi-gaokao-crawler` | deleted | 用户已删除；仓库地图中不再作为当前仓库列出。当前保留的是 `gaokao-xuezhi-crawler`。 |
+| - | - | 当前无需要在仓库地图中保留的已删除仓库记录。 |
 
 ## 维护流程
 
