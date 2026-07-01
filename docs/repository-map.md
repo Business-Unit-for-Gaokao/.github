@@ -1,14 +1,15 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 **32** 个仓库。已删除的历史爬虫仓库不再列入当前库存；保留的爬虫能力收敛到“学职平台、阳光高考、掌上高考”三条主线，JSON 数据统一归档到 `gaokao-data-json`。
+本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 **33** 个仓库。已删除的历史爬虫仓库不再列入当前库存；保留的爬虫能力收敛到“学职平台、阳光高考、掌上高考”三条主线，JSON 数据统一归档到 `gaokao-data-json`。
 
 ## 组织边界
 
 `Business-Unit-for-Gaokao` 承载高考志愿填报、数据采集、知识库、咨询交付、线上服务和相关部署编排。
 
 - 具体业务代码、业务数据资产、业务专属知识库：留在本组织。
+- 业务需求、MVP、工作流和未决问题：进入 `requirements`。
+- 部署、域名、CI/CD、环境映射和运维说明：进入标准 `deploy`，既有部署资产可继续由 `future-deploy` 承接。
 - 通用平台底座、跨 BU clone-bot 和通用 codegen 能力：归 `Business-Unit-for-Platform`。
-- 高考业务专用工具和脚本：留在本组织；若未来抽象为通用平台能力，再迁移到 `Business-Unit-for-Platform`。
 - 集团级战略、组合管理、制度和跨 BU 治理：归 `President-Office`。
 
 ## 开发 / 部署分离原则
@@ -24,7 +25,7 @@
 | --- | --- | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 学职平台 / XZ 代表爬虫仓库，面向 `xz.chsi.com.cn` 的专业与职业数据采集。 |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | Python | 阳光高考 / CHSI 代表爬虫仓库。 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 掌上高考 / gaokao.cn 代表爬虫仓库；已合并 department、jobs、special 等爬虫源码，并记录 scores/provinceline 后续归并计划。 |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 掌上高考 / gaokao.cn 代表爬虫仓库；已合并 department、jobs、special、qiangji 等爬虫源码，并记录 scores/provinceline 后续归并计划。 |
 
 ## JSON 数据仓库
 
@@ -39,7 +40,6 @@
 | Repository | Visibility | Language | Purpose / Notes |
 | --- | --- | --- | --- |
 | [`gaokao-plans-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-plans-crawler) | public | Python | 仍在组织内的掌上高考招生计划历史/生成爬虫仓库；清理前需确认源码是否已归并到 `zhangshanggaokao`，历史 JSON 归档在 `gaokao-data-json`。 |
-| [`gaokao-qiangji-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-qiangji-crawler) | public | Python | 仍在组织内的掌上高考强基计划历史/生成爬虫仓库；清理前需确认源码是否已归并到 `zhangshanggaokao`，历史 JSON 归档在 `gaokao-data-json`。 |
 | [`yangguang-gaokao-scraper`](https://github.com/Business-Unit-for-Gaokao/yangguang-gaokao-scraper) | public | HTML | 仍在组织内的阳光高考旧/重复 scraper；清理前需确认是否有独特源码需要并入 `sunshinegaokao`。 |
 | [`zhangshang-gaokao-crawler`](https://github.com/Business-Unit-for-Gaokao/zhangshang-gaokao-crawler) | public | Python | 仍在组织内的掌上高考旧/重复 crawler；清理前需确认是否有独特源码需要并入 `zhangshanggaokao`。 |
 
@@ -58,7 +58,8 @@
 
 | Repository | Visibility | Language | Purpose / Notes |
 | --- | --- | --- | --- |
-| [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy) | private | Shell | 高考业务独立部署仓库；承载部署、域名、服务器发布等运维逻辑。 |
+| [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy) | private | - | 标准部署与运维入口；记录部署编排、域名、CI/CD、环境映射和运维说明。 |
+| [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy) | private | Shell | 高考业务既有独立部署仓库；承载部署、域名、服务器发布等运维逻辑。 |
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | Python | 高考业务调度相关服务。 |
 | [`codegen-bot`](https://github.com/Business-Unit-for-Gaokao/codegen-bot) | public | Java | 高考业务代码生成辅助脚本。 |
 
@@ -66,6 +67,7 @@
 
 | Repository | Visibility | Language | Purpose / Notes |
 | --- | --- | --- | --- |
+| [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements) | private | - | 高考业务需求、MVP、工作流、未决问题标准入口。 |
 | [`gaokao`](https://github.com/Business-Unit-for-Gaokao/gaokao) | private | - | 高考运营信息。 |
 | [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base) | private | Python | 高考志愿咨询 Obsidian 知识库。 |
 | [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json) | private | - | 从历史爬虫仓库集中迁移出的 JSON 数据快照仓库。 |
@@ -91,9 +93,10 @@
 
 | Repository | Visibility | Archived | Language | Pushed at | Description |
 | --- | --- | --- | --- | --- | --- |
-| [`.github`](https://github.com/Business-Unit-for-Gaokao/.github) | public | false | - | 2026-07-01T04:29:45Z | Business-Unit-for-Gaokao organization profile and repository map |
+| [`.github`](https://github.com/Business-Unit-for-Gaokao/.github) | public | false | - | 2026-07-01T10:49:31Z | Business-Unit-for-Gaokao organization profile and repository map |
 | [`ai-gaokao-jobs-china`](https://github.com/Business-Unit-for-Gaokao/ai-gaokao-jobs-china) | public | false | Python | 2026-06-16T23:09:56Z | 高考专业AI工作替代率 |
 | [`codegen-bot`](https://github.com/Business-Unit-for-Gaokao/codegen-bot) | public | false | Java | 2026-07-01T02:27:51Z | Code generation helper scripts for gaokao projects |
+| [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy) | private | false | - | 2026-07-01T10:49:42Z | Business-Unit-for-Gaokao deployment and operations |
 | [`Front_Node_Code`](https://github.com/Business-Unit-for-Gaokao/Front_Node_Code) | private | false | TypeScript | 2026-06-28T02:02:14Z |  |
 | [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy) | private | false | Shell | 2026-07-01T02:03:42Z | 自动化部署项目：Docker Compose 编排 Redis、MySQL 及前后端服务部署 |
 | [`future-exam-uniapp`](https://github.com/Business-Unit-for-Gaokao/future-exam-uniapp) | private | false | Vue | 2026-06-27T15:22:42Z | FutureTech线上考试uniapp端 |
@@ -102,7 +105,6 @@
 | [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base) | private | false | Python | 2026-07-01T04:16:34Z | 高考志愿咨询 Obsidian 知识库 |
 | [`gaokao-landing`](https://github.com/Business-Unit-for-Gaokao/gaokao-landing) | private | false | HTML | 2026-06-10T09:07:51Z | 高考宣传页 |
 | [`gaokao-plans-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-plans-crawler) | public | false | Python | 2026-07-01T02:03:41Z | Generated crawler repo for plans |
-| [`gaokao-qiangji-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-qiangji-crawler) | public | false | Python | 2026-06-09T03:45:55Z | Generated crawler repo for plans |
 | [`gaokao-salary`](https://github.com/Business-Unit-for-Gaokao/gaokao-salary) | public | false | JavaScript | 2026-04-12T16:50:54Z | 高考专业薪资 |
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | false | Python | 2026-06-02T22:12:05Z |  |
 | [`gaokao-teacher-package`](https://github.com/Business-Unit-for-Gaokao/gaokao-teacher-package) | private | false | HTML | 2026-06-29T09:09:13Z |  |
@@ -115,12 +117,13 @@
 | [`multi-services-platform`](https://github.com/Business-Unit-for-Gaokao/multi-services-platform) | private | false | Java | 2026-07-01T05:39:05Z | FutureTechJava后端 |
 | [`pay`](https://github.com/Business-Unit-for-Gaokao/pay) | private | false | JavaScript | 2026-06-15T09:55:17Z |  |
 | [`python_for_gaokao`](https://github.com/Business-Unit-for-Gaokao/python_for_gaokao) | private | false | - | 2026-06-01T00:26:29Z |  |
+| [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements) | private | false | - | 2026-07-01T10:49:39Z | Business-Unit-for-Gaokao business/product requirements |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | false | Python | 2026-06-07T12:37:09Z | 阳光高考 / CHSI crawler |
 | [`uni-app-gaokao`](https://github.com/Business-Unit-for-Gaokao/uni-app-gaokao) | private | false | Vue | 2026-06-09T03:22:10Z | FutureTech高考uniapp端 |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | false | HTML | 2026-07-01T03:20:17Z | 学职平台独立爬虫：专业与职业数据采集 |
 | [`yangguang-gaokao-scraper`](https://github.com/Business-Unit-for-Gaokao/yangguang-gaokao-scraper) | public | false | HTML | 2026-06-09T03:46:04Z | 阳光高考专业信息爬虫 - 爬取高校专业目录、详细介绍、开设院校等数据 |
 | [`zhangshang-gaokao-crawler`](https://github.com/Business-Unit-for-Gaokao/zhangshang-gaokao-crawler) | public | false | Python | 2026-06-09T03:45:46Z | 高考数据爬取 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | false | Python | 2026-07-01T10:14:23Z | 掌上高考 crawler factory |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | false | Python | 2026-07-01T10:59:11Z | 掌上高考 crawler factory |
 | [`Zhangxuefeng-AI-gaokao`](https://github.com/Business-Unit-for-Gaokao/Zhangxuefeng-AI-gaokao) | public | false | - | 2026-04-23T07:21:35Z | 本项目是一个基于“本地知识库 + 向量引擎(Qdrant) + 大语言模型”构建的开源高考志愿咨询系统。为打破技术壁垒，让完全不懂代码的电脑小白也能享受到 AI 的时代红利，项目在最新版本中独家加入了【傻瓜式一键配置脚手架】。用户告别了极其繁琐的环境配置，只需点击一次，电脑就会自动下载和部署包含数据库在内的全部环境。 |
 | [`zhonggaokao`](https://github.com/Business-Unit-for-Gaokao/zhonggaokao) | private | false | HTML | 2026-06-27T15:48:04Z |  |
 
@@ -130,17 +133,18 @@
 
 | Repository | Current status | Notes |
 | --- | --- | --- |
-| `gaokao-collection` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
+| `gaokao-collection` | absent from live inventory | 历史信息采集脚手架/清理对象；如需恢复，请从代表仓库或 GitHub 删除恢复流程确认来源。 |
 | `gaokao-department-crawler` | absent from live inventory | 源码已并入 `zhangshanggaokao`，历史 JSON 位于 `gaokao-data-json`。 |
 | `gaokao-jobs-crawler` | absent from live inventory | 源码已并入 `zhangshanggaokao`，历史 JSON 位于 `gaokao-data-json`。 |
 | `gaokao-special-crawler` | absent from live inventory | 源码已并入 `zhangshanggaokao`，历史 JSON 位于 `gaokao-data-json`。 |
+| `gaokao-qiangji-crawler` | absent from live inventory | 源码已并入 `zhangshanggaokao`，历史 JSON 位于 `gaokao-data-json` 的 `zsgk/gaokao-qiangji-crawler/data/qiangji/`。 |
 | `gaokao-scores-crawler` | absent from live inventory | 不再作为独立仓库保留；`zhangshanggaokao` README 已记录 scores/provinceline 后续归并计划，历史 JSON 位于 `gaokao-data-json`。 |
 | `gaokao-school-scores-crawler` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
-| `xuezhi-platform-crawler` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
-| `xuezhi-gaokao-crawler` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
-| `gaokao-xuezhi-crawler` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
-| `clawer` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
-| `gaokao-crawler-factory` | absent from live inventory | 历史爬虫/清理对象；如需恢复，请从 `gaokao-data-json`、代表爬虫仓库或 GitHub 删除恢复流程确认来源。 |
+| `xuezhi-platform-crawler` | absent from live inventory | 历史学职平台仓库名；最终代表仓库是 `xuezhipingtai`。 |
+| `xuezhi-gaokao-crawler` | absent from live inventory | 历史 CHSI/XZ 混合仓库；最终代表仓库为 `sunshinegaokao` / `xuezhipingtai`。 |
+| `gaokao-xuezhi-crawler` | absent from live inventory | 历史混合仓库；最终代表仓库为三条爬虫线。 |
+| `clawer` | absent from live inventory | 历史爬虫框架/清理对象。 |
+| `gaokao-crawler-factory` | absent from live inventory | 历史爬虫工厂/清理对象。 |
 
 ## 维护流程
 
