@@ -11,19 +11,27 @@
 - **数据与知识**：业务数据、知识库、运营资料留在高考 BU 内，避免混入总裁办或平台底座仓库。
 - **工具边界**：高考专用脚本留在本组织；可复用脚手架、clone-bot、通用 codegen、平台基础设施归 `Business-Unit-for-Platform`。
 
-## 关键仓库
+## 当前关键仓库
 
 - [`multi-services-platform`](https://github.com/Business-Unit-for-Gaokao/multi-services-platform)：高考业务 Java 后端。
 - [`future-exam-uniapp`](https://github.com/Business-Unit-for-Gaokao/future-exam-uniapp)：线上考试 / 高考业务 UniApp 端。
-- [`gaokao`](https://github.com/Business-Unit-for-Gaokao/gaokao)：高考运营信息。
-- [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base)：高考志愿咨询 Obsidian 知识库。
 - [`gaokao-volunteer-bot`](https://github.com/Business-Unit-for-Gaokao/gaokao-volunteer-bot)：高考志愿填报 AI 机器人。
+- [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base)：高考志愿咨询 Obsidian 知识库。
+- [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json)：爬虫历史 JSON 数据集中仓库。
 - [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy)：高考业务独立部署仓库。
-- [`xuezhi-platform-crawler`](https://github.com/Business-Unit-for-Gaokao/xuezhi-platform-crawler)：学职平台独立爬虫，采集专业与职业数据。
-- [`gaokao-xuezhi-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-xuezhi-crawler)：高考 / 学职混合采集历史仓库。
-- [`xuezhi-gaokao-crawler`](https://github.com/Business-Unit-for-Gaokao/xuezhi-gaokao-crawler)：Legacy CHSI 学职爬虫迁移仓库。
 
-完整仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。
+## 当前三条代表爬虫线
+
+- [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai)：学职平台 / XZ。
+- [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao)：阳光高考 / CHSI。
+- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn。
+
+## 保留的 Pages / 静态展示仓库
+
+- [`gaokao-salary`](https://github.com/Business-Unit-for-Gaokao/gaokao-salary)：高考专业薪资 Pages / 静态展示资产。
+- [`ai-gaokao-jobs-china`](https://github.com/Business-Unit-for-Gaokao/ai-gaokao-jobs-china)：高考专业 AI 工作替代率 Pages / 静态展示资产。
+
+完整实时仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。
 
 ## 治理原则
 
@@ -34,4 +42,4 @@
 
 ---
 
-_Last updated: 2026-07-01_
+_Last updated: 2026-07-01; live inventory: 32 repositories._
