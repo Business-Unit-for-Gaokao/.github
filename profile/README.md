@@ -26,7 +26,7 @@
 
 - [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai)：学职平台 / XZ。
 - [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao)：阳光高考 / CHSI。
-- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn；已合并 department、jobs、special、qiangji 等源码。
+- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn；已合并 department、jobs、special、qiangji，以及 legacy `zhangshang-gaokao-crawler` 中的 schools、majors、plans、school_scores、scores 等源码。
 
 完整实时仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。
 
