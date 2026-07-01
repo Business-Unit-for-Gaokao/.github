@@ -1,6 +1,6 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 39 个仓库。
+本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 40 个仓库；其中爬虫仓库按“学职、阳光高考、掌上高考”三条主线收敛，JSON 数据统一归档到 `gaokao-data-json`。
 
 ## 组织边界
 
@@ -43,28 +43,36 @@
 | `python_for_gaokao` | private | 高考 Python 工具 / 脚本资产 |
 | `Front_Node_Code` | private | 前端 / Node 相关遗留或辅助资产 |
 
-## 数据采集与爬虫仓库
+## 数据采集、爬虫与数据仓库
 
-| Repository | Visibility | Purpose / Notes |
-| --- | --- | --- |
-| `gaokao-crawler` | public | 高考数据爬取 |
-| `gaokao-crawler-factory` | public | 爬虫工厂 |
-| `gaokao-universities-data` | private | 全国高校基础数据库、详情采集器、小红书内容生成器 |
-| `sunshine-gaokao-scraper` | public | 阳光高考专业信息爬虫 |
-| `xuezhi-platform-crawler` | public | 学职平台独立爬虫；专业与职业数据采集的主仓库 |
-| `gaokao-xuezhi-crawler` | public | 高考 / 学职混合采集历史仓库；后续学职平台采集迁入 `xuezhi-platform-crawler` |
-| `xuezhi-gaokao-crawler` | public | Legacy CHSI 学职爬虫；从 `FutureTechQuant` 迁移，作为历史迁移仓库保留 |
-| `gaokao-collection` | public | 高考信息收集脚本 |
-| `ai-gaokao-jobs-china` | public | 高考专业 AI 工作替代率 |
-| `gaokao-salary` | public | 高考专业薪资 |
-| `gaokao-plans-crawler` | public | 招生计划相关爬虫 |
-| `gaokao-scores-crawler` | public | 分数线相关爬虫 |
-| `gaokao-jobs-crawler` | public | 就业 / 职业相关爬虫 |
-| `gaokao-special-crawler` | public | 专项数据爬虫 |
-| `gaokao-department-crawler` | public | 院系 / 专业组相关爬虫 |
-| `gaokao-qiangji-crawler` | public | 强基计划相关爬虫 |
-| `gaokao-school-scores-crawler` | public | 院校分数相关爬虫 |
-| `clawer` | public | 爬虫相关历史仓库 |
+### 当前保留主仓库
+
+| Repository | Visibility | Role | Purpose / Notes |
+| --- | --- | --- | --- |
+| `xuezhi-platform-crawler` | public | 学职平台爬虫 | 学职平台独立爬虫主仓库；只面向 `xz.chsi.com.cn` 的专业与职业数据采集 |
+| `sunshine-gaokao-scraper` | public | 阳光高考爬虫 | 阳光高考 / CHSI 专业、院校、开设院校等数据采集主仓库 |
+| `gaokao-crawler` | public | 掌上高考爬虫 | 掌上高考统一爬虫入口；承接招生计划、分数线、专业、就业、院系、强基、院校分数等采集逻辑 |
+| `gaokao-data-json` | private | JSON 数据仓库 | 集中归档从历史爬虫仓库迁出的 JSON、schema、manifest、清洗后结果和数据说明；不放爬虫逻辑 |
+
+### 删除前需迁移 JSON 数据的仓库
+
+| Repository | Visibility | Target | Notes |
+| --- | --- | --- | --- |
+| `gaokao-plans-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考招生计划数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-scores-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考分数线数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-jobs-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考就业 / 职业数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-special-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考专业 / special 数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-department-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考院系 / 专业组数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-qiangji-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考强基计划数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-school-scores-crawler` | public | `gaokao-data-json` + `gaokao-crawler` | 掌上高考院校分数数据；JSON 迁入数据仓库，采集逻辑并入掌上高考主爬虫 |
+| `gaokao-xuezhi-crawler` | public | `gaokao-data-json` + 三个主爬虫 | 历史混合仓库，包含阳光高考 / CHSI、学职平台等内容；数据迁出后删除 |
+| `xuezhi-gaokao-crawler` | public | `gaokao-data-json` + `xuezhi-platform-crawler` / `sunshine-gaokao-scraper` | Legacy CHSI / 学职相关仓库；数据迁出后删除 |
+| `clawer` | public | `gaokao-data-json` + `xuezhi-platform-crawler` / `sunshine-gaokao-scraper` | 历史爬虫框架，包含 CHSI 和学职数据；数据迁出后删除 |
+| `gaokao-collection` | public | `gaokao-data-json` / 业务工具仓库 | 高考信息收集脚本；若只剩 seeds/config 数据则归档后删除 |
+| `gaokao-crawler-factory` | public | 三个主爬虫 / Platform 工具 | 爬虫工厂管理项目；如无继续生成需求，删除或迁出通用能力 |
+| `ai-gaokao-jobs-china` | public | `gaokao-data-json` | 高考专业 AI 工作替代率数据与静态输出；JSON/派生结果迁入 `derived/` 后删除 |
+| `gaokao-salary` | public | `gaokao-data-json` | 专业薪资 JSON / 静态输出；数据迁入 `derived/` 后删除 |
+| `gaokao-universities-data` | private | `gaokao-data-json` | 高校基础库、专业库、详情结果等 JSON 数据；迁入 `universities/` 后删除 |
 
 ## 第三方 / 参考项目
 
@@ -76,7 +84,14 @@
 
 | Repository | Status | Notes |
 | --- | --- | --- |
-| - | - | 当前无需要在仓库地图中保留的已删除仓库记录。 |
+| - | - | 当前尚未实际删除；上方“删除前需迁移 JSON 数据的仓库”是待清理清单。 |
+
+## 删除执行原则
+
+1. 先把待删仓库中的 `.json`、`.jsonl`、schema、manifest、必要 README 数据说明迁入 `gaokao-data-json`。
+2. 再把仍需运行的采集逻辑分别并入三个主爬虫：`xuezhi-platform-crawler`、`sunshine-gaokao-scraper`、`gaokao-crawler`。
+3. 验证数据可读、JSON 可解析、主爬虫入口存在后，再删除历史仓库。
+4. 删除完成后再次回读 GitHub live inventory，并把本文“待清理清单”移动到“已删除 / 不再维护”。
 
 ## 维护流程
 
