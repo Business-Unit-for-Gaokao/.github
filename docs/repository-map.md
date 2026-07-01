@@ -1,6 +1,6 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 38 个仓库。
+本文记录 `Business-Unit-for-Gaokao` 当前仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-07-01 回读确认，当前组织共 39 个仓库。
 
 ## 组织边界
 
@@ -51,8 +51,9 @@
 | `gaokao-crawler-factory` | public | 爬虫工厂 |
 | `gaokao-universities-data` | private | 全国高校基础数据库、详情采集器、小红书内容生成器 |
 | `sunshine-gaokao-scraper` | public | 阳光高考专业信息爬虫 |
-| `gaokao-xuezhi-crawler` | public | 学职 / 相关数据爬取 |
-| `xuezhi-gaokao-crawler` | public | Legacy CHSI 学职爬虫；从 `FutureTechQuant` 迁移 |
+| `xuezhi-platform-crawler` | public | 学职平台独立爬虫；专业与职业数据采集的主仓库 |
+| `gaokao-xuezhi-crawler` | public | 高考 / 学职混合采集历史仓库；后续学职平台采集迁入 `xuezhi-platform-crawler` |
+| `xuezhi-gaokao-crawler` | public | Legacy CHSI 学职爬虫；从 `FutureTechQuant` 迁移，作为历史迁移仓库保留 |
 | `gaokao-collection` | public | 高考信息收集脚本 |
 | `ai-gaokao-jobs-china` | public | 高考专业 AI 工作替代率 |
 | `gaokao-salary` | public | 高考专业薪资 |

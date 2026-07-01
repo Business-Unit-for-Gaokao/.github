@@ -19,7 +19,8 @@
 - [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base)：高考志愿咨询 Obsidian 知识库。
 - [`gaokao-volunteer-bot`](https://github.com/Business-Unit-for-Gaokao/gaokao-volunteer-bot)：高考志愿填报 AI 机器人。
 - [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy)：高考业务独立部署仓库。
-- [`gaokao-xuezhi-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-xuezhi-crawler)：学职 / 高考相关数据爬取。
+- [`xuezhi-platform-crawler`](https://github.com/Business-Unit-for-Gaokao/xuezhi-platform-crawler)：学职平台独立爬虫，采集专业与职业数据。
+- [`gaokao-xuezhi-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-xuezhi-crawler)：高考 / 学职混合采集历史仓库。
 - [`xuezhi-gaokao-crawler`](https://github.com/Business-Unit-for-Gaokao/xuezhi-gaokao-crawler)：Legacy CHSI 学职爬虫迁移仓库。
 
 完整仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。
