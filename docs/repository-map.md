@@ -25,7 +25,7 @@
 | --- | --- | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 学职平台 / XZ 代表爬虫仓库，面向 `xz.chsi.com.cn` 的专业与职业数据采集。 |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | Python | 阳光高考 / CHSI 代表爬虫仓库。 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 掌上高考 / gaokao.cn 代表爬虫仓库；已合并 department、jobs、special、qiangji，以及 legacy `zhangshang-gaokao-crawler` 中的 schools、majors、plans、school_scores、scores 等爬虫源码，并记录 scores/provinceline 后续归并计划。 |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 掌上高考 / gaokao.cn 代表爬虫仓库；已合并 department、jobs、special、qiangji、plans，以及 legacy `zhangshang-gaokao-crawler` 中的 schools、majors、school_scores、scores 等爬虫源码；`gaokao-plans-crawler` 的新版 plans runner、workflow、new_plans 和 v13 页面抓取参考也已归并，并记录 scores/provinceline 后续归并计划。 |
 
 ## JSON 数据仓库
 
@@ -39,7 +39,7 @@
 
 | Repository | Visibility | Language | Purpose / Notes |
 | --- | --- | --- | --- |
-| [`gaokao-plans-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-plans-crawler) | public | Python | 仍在组织内的掌上高考招生计划历史/生成爬虫仓库；清理前需确认源码是否已归并到 `zhangshanggaokao`，历史 JSON 归档在 `gaokao-data-json`。 |
+| [`gaokao-plans-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-plans-crawler) | public | Python | 仍在组织内的掌上高考招生计划旧/重复 crawler；可复用源码已并入 `zhangshanggaokao`，包括新版 plans runner、workflow、new_plans 和 v13 页面抓取参考；待获得删除凭据后删除旧仓库；历史 `data/plans` / `data/oldplans` JSON 不重复搬入源码仓库，应归档在 `gaokao-data-json`。 |
 | [`yangguang-gaokao-scraper`](https://github.com/Business-Unit-for-Gaokao/yangguang-gaokao-scraper) | public | HTML | 仍在组织内的阳光高考旧/重复 scraper；清理前需确认是否有独特源码需要并入 `sunshinegaokao`。 |
 | [`zhangshang-gaokao-crawler`](https://github.com/Business-Unit-for-Gaokao/zhangshang-gaokao-crawler) | public | Python | 仍在组织内的掌上高考旧/重复 crawler；可复用源码已并入 `zhangshanggaokao`，待获得删除凭据后删除旧仓库；历史 JSON 不重复搬入源码仓库，应归档在 `gaokao-data-json`。 |
 
