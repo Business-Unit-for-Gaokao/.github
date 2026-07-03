@@ -16,10 +16,8 @@
 
 - [`multi-services-platform`](https://github.com/Business-Unit-for-Gaokao/multi-services-platform)：高考业务 Java 后端。
 - [`future-exam-uniapp`](https://github.com/Business-Unit-for-Gaokao/future-exam-uniapp)：线上考试 / 高考业务 UniApp 端。
-- [`gaokao-volunteer-bot`](https://github.com/Business-Unit-for-Gaokao/gaokao-volunteer-bot)：高考志愿填报 AI 机器人。
 - [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)：高考业务需求标准入口。
 - [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)：高考部署与运维标准入口。
-- [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base)：高考志愿咨询 Obsidian 知识库。
 - [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json)：爬虫历史 JSON 数据集中仓库。
 
 ## 当前三条代表爬虫线
