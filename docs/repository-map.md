@@ -153,3 +153,8 @@
 3. 对只改 README/docs 的轻量更新，可以直接维护 `main`。
 4. 代码、部署、CI、架构性变更优先走分支和 PR。
 5. 不提交 token、密码、SSH key、服务器凭据、客户隐私和未授权数据。
+
+
+### Repository consolidation note
+
+`gaokao` has been merged into `requirements`; keep `Business-Unit-for-Gaokao/requirements` as the live source of truth for business/product requirements and legacy strategy/operating notes. Do not keep a separate live repository card or inventory entry for deleted `gaokao` after deletion is verified.
