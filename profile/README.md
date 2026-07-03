@@ -7,39 +7,35 @@
 ## 核心边界
 
 - **业务应用开发**：前端、后端、机器人、咨询系统、数据采集器等，放在对应业务/应用仓库。
-- **业务需求**：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。
+- **业务需求**：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。`gaokao` 已合并进 `requirements`，不再作为独立 live 仓库维护。
 - **部署运维**：标准入口是 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)；既有部署资产可继续由 [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy) 承接。开发仓库不内置生产发布逻辑。
 - **数据与知识**：业务数据、知识库、运营资料留在高考 BU 内，避免混入总裁办或平台底座仓库。
 - **工具边界**：高考专用脚本留在本组织；可复用脚手架、clone-bot、通用 codegen、平台基础设施归 `Business-Unit-for-Platform`。
 
 ## 当前关键仓库
 
+- [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)：高考业务需求、MVP、工作流、运营策略和合并后的 legacy strategy/operating notes 标准入口。
 - [`multi-services-platform`](https://github.com/Business-Unit-for-Gaokao/multi-services-platform)：高考业务 Java 后端。
 - [`future-exam-uniapp`](https://github.com/Business-Unit-for-Gaokao/future-exam-uniapp)：线上考试 / 高考业务 UniApp 端。
-- [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)：高考业务需求标准入口。
 - [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)：高考部署与运维标准入口。
+- [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy)：既有部署资产与运维编排。
 - [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json)：爬虫历史 JSON 数据集中仓库。
 
 ## 当前三条代表爬虫线
 
 - [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai)：学职平台 / XZ。
 - [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao)：阳光高考 / CHSI。
-- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn；已合并 department、jobs、special、qiangji、plans，以及 legacy `zhangshang-gaokao-crawler` 中的 schools、majors、school_scores、scores 等源码；`gaokao-plans-crawler` 的新版 plans runner、workflow、new_plans 和 v13 页面抓取参考也已归并。
+- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn。
 
-完整实时仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。
+完整实时仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。组织 Project 只跟踪当前 live 仓库；已删除、迁移或合并后的仓库不保留项目卡片。
 
 ## 治理原则
 
 - 开发和部署必须分开：应用仓库只负责开发、构建、测试、打包；生产部署、域名、服务器发布进入独立部署仓库/流程。
 - GitHub Actions 用于 CI/CD，不手动 SSH 到服务器操作生产发布。
 - 不在仓库中保存 token、密码、服务器凭据、客户隐私或未授权数据。
-- 仓库删除、迁移、合并后，要同步更新本组织 profile 和仓库地图。
+- 仓库删除、迁移、合并后，要同步更新本组织 profile、仓库地图和组织 Project。
 
 ---
 
-_Last updated: 2026-07-01; live inventory: 33 repositories._
-
-
-### Repository consolidation note
-
-`gaokao` has been merged into `requirements`; keep `Business-Unit-for-Gaokao/requirements` as the live source of truth for business/product requirements and legacy strategy/operating notes. Do not keep a separate live repository card or inventory entry for deleted `gaokao` after deletion is verified.
+_Last updated: 2026-07-03; live inventory: 31 repositories._
