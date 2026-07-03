@@ -40,3 +40,8 @@
 ---
 
 _Last updated: 2026-07-01; live inventory: 33 repositories._
+
+
+### Repository consolidation note
+
+`gaokao` has been merged into `requirements`; keep `Business-Unit-for-Gaokao/requirements` as the live source of truth for business/product requirements and legacy strategy/operating notes. Do not keep a separate live repository card or inventory entry for deleted `gaokao` after deletion is verified.
