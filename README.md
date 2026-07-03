@@ -17,3 +17,8 @@
 - 开发和部署必须分开：应用仓库只负责开发、构建、测试、打包；部署、域名、证书、DNS、Pages、Cloudflare、服务器发布放独立部署仓库或部署流程。
 - 简单 README/docs 更新可以直接维护 `main`；代码、部署、CI、架构性变更优先走 PR。
 - 不提交 token、密码、SSH key、服务器凭据、客户隐私和未授权数据。
+
+
+### Repository consolidation note
+
+`gaokao` has been merged into `requirements`; keep `Business-Unit-for-Gaokao/requirements` as the live source of truth for business/product requirements and legacy strategy/operating notes. Do not keep a separate live repository card or inventory entry for deleted `gaokao` after deletion is verified.
