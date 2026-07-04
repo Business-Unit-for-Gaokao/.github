@@ -12,7 +12,6 @@
 - 最近同步：2026-07-03
 - 当前 live 仓库数：31（private 21 / public 10）
 - 组织 Project：[`高考项目总览`](https://github.com/orgs/Business-Unit-for-Gaokao/projects/1)
-- `gaokao` 已合并进 `requirements`；`requirements` 是业务需求、运营策略和 legacy notes 的标准入口。
 
 ## 维护原则
 
