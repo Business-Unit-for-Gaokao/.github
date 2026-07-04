@@ -17,8 +17,8 @@
 
 - 先回读 GitHub 当前仓库状态，再更新文档。
 - 仓库删除、迁移、改名、合并后，同步更新 `docs/repository-map.md`、`profile/README.md` 和组织 Project。
-- 当前代表爬虫线：`xuezhipingtai`、`sunshinegaokao`、`zhangshanggaokao`；历史 JSON 集中到 `gaokao-data-json`。
+- 当前代表爬虫线：`xuezhipingtai`、`sunshinegaokao`、`zhangshanggaokao`、`information`；历史 JSON 集中到 `gaokao-data-json`。
 - `requirements` 是高考业务需求标准入口；`deploy` 是部署与运维标准入口。
-- 开发和部署必须分开：应用仓库只负责开发、构建、测试、打包；部署、域名、证书、DNS、Pages、Cloudflare、服务器发布放独立部署仓库或部署流程。
+- 开发和部署必须分开：应用仓库只负责数据采集；业务开发、构建、测试、打包；部署、域名、证书、DNS、Pages、Cloudflare、服务器发布放独立部署仓库或部署流程。
 - 简单 README/docs 更新可以直接维护 `main`；代码、部署、CI、架构性变更优先走 PR。
 - 不提交 token、密码、SSH key、服务器凭据、客户隐私和未授权数据。

@@ -2,12 +2,12 @@
 
 高考志愿填报、数据采集、知识库、咨询交付和线上服务相关业务组织。
 
-本组织承载高考业务线的应用代码、数据资产、运营知识、专用工具和部署编排；集团级战略和跨 BU 治理归 `President-Office`，通用平台底座、跨 BU clone-bot 和通用 codegen 能力归 `Business-Unit-for-Platform`。
+本组织承载高考业务线的应用代码、数据资产、运营知识、专用工具和部署编排；集团级战略和跨 BU 治理归 `President-Office`，通用平台底座能力归 `Business-Unit-for-Platform`。
 
 ## 核心边界
 
 - **业务应用开发**：前端、后端、机器人、咨询系统、数据采集器等，放在对应业务/应用仓库。
-- **业务需求**：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。`gaokao` 已合并进 `requirements`，不再作为独立 live 仓库维护。
+- **业务需求**：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。
 - **部署运维**：标准入口是 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)；既有部署资产可继续由 [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy) 承接。开发仓库不内置生产发布逻辑。
 - **数据与知识**：业务数据、知识库、运营资料留在高考 BU 内，避免混入总裁办或平台底座仓库。
 - **工具边界**：高考专用脚本留在本组织；可复用脚手架、clone-bot、通用 codegen、平台基础设施归 `Business-Unit-for-Platform`。
