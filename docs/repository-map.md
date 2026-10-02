@@ -1,6 +1,6 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前 live 仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-10-02 回读确认，当前组织共 **30** 个 live 仓库（private 20 / public 10）。已删除、迁移或合并后的历史仓库不再列入当前库存，也不在组织 Project 中保留卡片。
+本文记录 `Business-Unit-for-Gaokao` 当前 live 仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-10-02 回读确认，当前组织共 **30** 个 live 仓库（private 20 / public 9）。已删除、迁移或合并后的历史仓库不再列入当前库存，也不在组织 Project 中保留卡片。
 
 ## 组织边界
 
@@ -8,7 +8,7 @@
 
 - 具体业务代码、业务数据资产、业务专属知识库：留在本组织。
 - 业务需求、MVP、工作流、运营策略和未决问题：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。
-- 部署、域名、CI/CD、环境映射和运维说明：进入标准 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)，既有部署资产可继续由 [`future-deploy`]([`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)) 承接。
+- 部署、域名、CI/CD、环境映射和运维说明：进入标准 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)，既有部署资产可继续由 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy) 承接。
 - 通用平台底座、跨 BU clone-bot 和通用 codegen 能力：归 `Business-Unit-for-Platform`。
 - 集团级战略、组合管理、制度和跨 BU 治理：归 `President-Office`。
 
@@ -31,7 +31,7 @@
 | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | 学职平台 / `xz.chsi.com.cn` 代表爬虫仓库。 |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | 阳光高考 / CHSI 代表爬虫仓库。 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | 掌上高考 / `gaokao.cn` 代表爬虫仓库。 | Admission-plans crawler consolidated here.
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | Gaokao.cn crawler factory and consolidated admission-plans collector. | Admission-plans crawler consolidated here.
 
 ## 需求与治理入口
 
@@ -76,7 +76,7 @@
 | --- | --- | --- | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 2026-07-01 | 学职平台独立爬虫：专业与职业数据采集 |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | Python | 2026-06-07 | 阳光高考 / CHSI crawler |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | 掌上高考 crawler factory; plans collector consolidated |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | Gaokao crawler factory and admission-plans collector |
 | [`codegen-bot`](https://github.com/Business-Unit-for-Gaokao/codegen-bot) | public | Java | 2026-07-09 | Code generation helper scripts for gaokao projects |
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | Python | 2026-06-02 | 无描述 |
 | [`gaokao-tool`](https://github.com/Business-Unit-for-Gaokao/gaokao-tool) | private | Python | 2026-06-10 | 无描述 |
@@ -121,7 +121,7 @@ _当前无 live 仓库。_
 | [`uni-app-gaokao`](https://github.com/Business-Unit-for-Gaokao/uni-app-gaokao) | private | Vue | 2026-06-09 | FutureTech高考uniapp端 |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 2026-07-01 | 学职平台独立爬虫：专业与职业数据采集 |
 | [`yangguanggaokao`](https://github.com/Business-Unit-for-Gaokao/yangguanggaokao) | public | HTML | 2026-06-09 | 阳光高考专业信息爬虫 - 爬取高校专业目录、详细介绍、开设院校等数据 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | 掌上高考 crawler factory; plans collector consolidated |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | Gaokao crawler factory and admission-plans collector |
 | [`Zhangxuefeng-AI-gaokao`](https://github.com/Business-Unit-for-Gaokao/Zhangxuefeng-AI-gaokao) | public | - | 2026-04-23 | 本项目是一个基于“本地知识库 + 向量引擎(Qdrant) + 大语言模型”构建的开源高考志愿咨询系统。为打破技术壁垒，让完全不懂代码的电脑小白也能享受到 AI 的时代红利，项目在最新版本中独家加入了【傻瓜式一键配置脚手架】。用户告别了极其繁琐的环境配置，只需点击一次，电脑就会自动下载和部署包含数据库在内的全部环境。 |
 | [`zhonggaokao`](https://github.com/Business-Unit-for-Gaokao/zhonggaokao) | private | HTML | 2026-07-17 | 无描述 |
 
