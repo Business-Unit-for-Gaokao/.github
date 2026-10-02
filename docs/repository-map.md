@@ -128,4 +128,4 @@ _当前无 live 仓库。_
 
 ---
 
-_Last updated: 2026-07-03; live inventory: 31 repositories._
+_Last updated: 2026-07-03; live inventory: 30 repositories._
