@@ -1,6 +1,6 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前 live 仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-10-02 回读确认，当前组织共 **30** 个 live 仓库（private 19 / public 8）。已删除、迁移或合并后的历史仓库不再列入当前库存，也不在组织 Project 中保留卡片。
+本文记录 `Business-Unit-for-Gaokao` 当前 live 仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-10-02 回读确认，当前组织共 **27** 个 live 仓库（private 19 / public 8）。已删除、迁移或合并后的历史仓库不再列入当前库存，也不在组织 Project 中保留卡片。
 
 ## 组织边界
 
@@ -31,7 +31,7 @@
 | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | 学职平台 / `xz.chsi.com.cn` 代表爬虫仓库。 |
 | [`yangguanggaokao`](https://github.com/Business-Unit-for-Gaokao/yangguanggaokao) | CHSI schools and majors crawler. |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | Gaokao.cn crawler factory and consolidated admission-plans collector. | Admission-plans crawler consolidated here.
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | Gaokao.cn crawler factory and consolidated admission-plans collector. |
 
 ## 需求与治理入口
 
