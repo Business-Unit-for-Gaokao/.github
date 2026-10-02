@@ -22,7 +22,7 @@
 ## 仓库合并状态
 
 - `gaokao` 已合并进 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)，`requirements` 是高考业务需求、运营策略和 legacy strategy/operating notes 的 live source of truth。
-- The `gaokao-plans-crawler` code is consolidated into [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao); the old repository was archived on 2026-10-02. Its 375 JSON snapshots were verified in [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json).
+- The `gaokao-plans-crawler` code was consolidated into [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao). The source repository was subsequently deleted from the organization; its 375 JSON snapshots remain verified in [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json).
 - 组织 Project 只跟踪当前 live 仓库；已删除或不在组织内的历史仓库不保留卡片。
 
 ## 当前三条代表爬虫线
