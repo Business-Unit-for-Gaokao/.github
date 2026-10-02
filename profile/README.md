@@ -8,7 +8,7 @@
 
 - **业务应用开发**：前端、后端、机器人、咨询系统、数据采集器等，放在对应业务/应用仓库。
 - **业务需求**：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。
-- **部署运维**：标准入口是 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)；既有部署资产可继续由 [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy) 承接。开发仓库不内置生产发布逻辑。
+- **部署运维**：标准入口是 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)；既有部署资产可继续由 [`future-deploy`]([`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)) 承接。开发仓库不内置生产发布逻辑。
 - **数据与知识**：业务数据、知识库、运营资料留在高考 BU 内，避免混入总裁办或平台底座仓库。
 - **工具边界**：高考专用脚本留在本组织；可复用脚手架、clone-bot、通用 codegen、平台基础设施归 `Business-Unit-for-Platform`。
 
@@ -18,7 +18,6 @@
 - [`multi-services-platform`](https://github.com/Business-Unit-for-Gaokao/multi-services-platform)：高考业务 Java 后端。
 - [`future-exam-uniapp`](https://github.com/Business-Unit-for-Gaokao/future-exam-uniapp)：线上考试 / 高考业务 UniApp 端。
 - [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)：高考部署与运维标准入口。
-- [`future-deploy`](https://github.com/Business-Unit-for-Gaokao/future-deploy)：既有部署资产与运维编排。
 - [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json)：爬虫历史 JSON 数据集中仓库。
 
 ## 当前三条代表爬虫线
@@ -38,4 +37,4 @@
 
 ---
 
-_Last updated: 2026-07-03; live inventory: 31 repositories._
+_Last updated: 2026-10-02; live inventory: 30 repositories._
