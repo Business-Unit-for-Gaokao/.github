@@ -8,7 +8,7 @@
 
 - **业务应用开发**：前端、后端、机器人、咨询系统、数据采集器等，放在对应业务/应用仓库。
 - **业务需求**：统一进入 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)。
-- **部署运维**：标准入口是 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)；既有部署资产可继续由 [`future-deploy`]([`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)) 承接。开发仓库不内置生产发布逻辑。
+- **部署运维**：标准入口是 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy)；既有部署资产可继续由 [`deploy`](https://github.com/Business-Unit-for-Gaokao/deploy) 承接。开发仓库不内置生产发布逻辑。
 - **数据与知识**：业务数据、知识库、运营资料留在高考 BU 内，避免混入总裁办或平台底座仓库。
 - **工具边界**：高考专用脚本留在本组织；可复用脚手架、clone-bot、通用 codegen、平台基础设施归 `Business-Unit-for-Platform`。
 
