@@ -1,6 +1,6 @@
 # Business-Unit-for-Gaokao Repository Map
 
-本文记录 `Business-Unit-for-Gaokao` 当前 live 仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-10-02 回读确认，当前组织共 **30** 个 live 仓库（private 20 / public 9）。已删除、迁移或合并后的历史仓库不再列入当前库存，也不在组织 Project 中保留卡片。
+本文记录 `Business-Unit-for-Gaokao` 当前 live 仓库用途、边界和维护原则。仓库清单基于 GitHub API 于 2026-10-02 回读确认，当前组织共 **30** 个 live 仓库（private 19 / public 8）。已删除、迁移或合并后的历史仓库不再列入当前库存，也不在组织 Project 中保留卡片。
 
 ## 组织边界
 
@@ -30,7 +30,7 @@
 | Repository | Role |
 | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | 学职平台 / `xz.chsi.com.cn` 代表爬虫仓库。 |
-| [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | 阳光高考 / CHSI 代表爬虫仓库。 |
+| [`yangguanggaokao`](https://github.com/Business-Unit-for-Gaokao/yangguanggaokao) | CHSI schools and majors crawler. |
 | [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | Gaokao.cn crawler factory and consolidated admission-plans collector. | Admission-plans crawler consolidated here.
 
 ## 需求与治理入口
@@ -75,12 +75,10 @@
 | Repository | Visibility | Language | Updated | Purpose / Notes |
 | --- | --- | --- | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 2026-07-01 | 学职平台独立爬虫：专业与职业数据采集 |
-| [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | Python | 2026-06-07 | 阳光高考 / CHSI crawler |
 | [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | Gaokao crawler factory and admission-plans collector |
 | [`codegen-bot`](https://github.com/Business-Unit-for-Gaokao/codegen-bot) | public | Java | 2026-07-09 | Code generation helper scripts for gaokao projects |
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | Python | 2026-06-02 | 无描述 |
 | [`gaokao-tool`](https://github.com/Business-Unit-for-Gaokao/gaokao-tool) | private | Python | 2026-06-10 | 无描述 |
-| [`gaokao-universities-data`](https://github.com/Business-Unit-for-Gaokao/gaokao-universities-data) | private | Shell | 2026-06-10 | 全国2919所高校基础数据库 + 详情采集器 + 小红书内容生成器 |
 | [`gaokao-salary`](https://github.com/Business-Unit-for-Gaokao/gaokao-salary) | public | JavaScript | 2026-04-12 | 高考专业薪资 |
 | [`ai-gaokao-jobs-china`](https://github.com/Business-Unit-for-Gaokao/ai-gaokao-jobs-china) | public | Python | 2026-06-16 | 高考专业AI工作替代率 |
 | [`Front_Node_Code`](https://github.com/Business-Unit-for-Gaokao/Front_Node_Code) | private | TypeScript | 2026-06-28 | 无描述 |
@@ -108,7 +106,6 @@ _当前无 live 仓库。_
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | Python | 2026-06-02 | 无描述 |
 | [`gaokao-teacher-package`](https://github.com/Business-Unit-for-Gaokao/gaokao-teacher-package) | private | HTML | 2026-06-29 | 无描述 |
 | [`gaokao-tool`](https://github.com/Business-Unit-for-Gaokao/gaokao-tool) | private | Python | 2026-06-10 | 无描述 |
-| [`gaokao-universities-data`](https://github.com/Business-Unit-for-Gaokao/gaokao-universities-data) | private | Shell | 2026-06-10 | 全国2919所高校基础数据库 + 详情采集器 + 小红书内容生成器 |
 | [`gaokao-volunteer-bot`](https://github.com/Business-Unit-for-Gaokao/gaokao-volunteer-bot) | private | JavaScript | 2026-06-25 | Gaokao volunteer application chatbot with Playwright data collection |
 | [`gaokao-zhiyuan-consulting-system-open`](https://github.com/Business-Unit-for-Gaokao/gaokao-zhiyuan-consulting-system-open) | private | JavaScript | 2026-06-06 | 高考志愿咨询系统开源版 |
 | [`infromation`](https://github.com/Business-Unit-for-Gaokao/infromation) | private | Python | 2026-10-01 | 无描述 |
@@ -117,7 +114,6 @@ _当前无 live 仓库。_
 | [`pay`](https://github.com/Business-Unit-for-Gaokao/pay) | private | JavaScript | 2026-06-15 | 无描述 |
 | [`python_for_gaokao`](https://github.com/Business-Unit-for-Gaokao/python_for_gaokao) | private | - | 2026-06-01 | 无描述 |
 | [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements) | private | - | 2026-08-04 | Business-Unit-for-Gaokao business/product requirements |
-| [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | Python | 2026-06-07 | 阳光高考 / CHSI crawler |
 | [`uni-app-gaokao`](https://github.com/Business-Unit-for-Gaokao/uni-app-gaokao) | private | Vue | 2026-06-09 | FutureTech高考uniapp端 |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 2026-07-01 | 学职平台独立爬虫：专业与职业数据采集 |
 | [`yangguanggaokao`](https://github.com/Business-Unit-for-Gaokao/yangguanggaokao) | public | HTML | 2026-06-09 | 阳光高考专业信息爬虫 - 爬取高校专业目录、详细介绍、开设院校等数据 |
@@ -127,4 +123,4 @@ _当前无 live 仓库。_
 
 ---
 
-_Last updated: 2026-10-02; live inventory: 29 repositories._
+_Last updated: 2026-10-02; live inventory: 27 repositories._
