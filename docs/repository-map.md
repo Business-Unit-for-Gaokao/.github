@@ -22,6 +22,7 @@
 ## 仓库合并状态
 
 - `gaokao` 已合并进 [`requirements`](https://github.com/Business-Unit-for-Gaokao/requirements)，`requirements` 是高考业务需求、运营策略和 legacy strategy/operating notes 的 live source of truth。
+- The `gaokao-plans-crawler` code is consolidated into [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao); the old repository was archived on 2026-10-02. Its 375 JSON snapshots were verified in [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json).
 - 组织 Project 只跟踪当前 live 仓库；已删除或不在组织内的历史仓库不保留卡片。
 
 ## 当前三条代表爬虫线
@@ -30,7 +31,7 @@
 | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | 学职平台 / `xz.chsi.com.cn` 代表爬虫仓库。 |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | 阳光高考 / CHSI 代表爬虫仓库。 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | 掌上高考 / `gaokao.cn` 代表爬虫仓库。 |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | 掌上高考 / `gaokao.cn` 代表爬虫仓库。 | Admission-plans crawler consolidated here.
 
 ## 需求与治理入口
 
@@ -75,9 +76,8 @@
 | --- | --- | --- | --- | --- |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 2026-07-01 | 学职平台独立爬虫：专业与职业数据采集 |
 | [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao) | public | Python | 2026-06-07 | 阳光高考 / CHSI crawler |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | 掌上高考 crawler factory |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | 掌上高考 crawler factory; plans collector consolidated |
 | [`codegen-bot`](https://github.com/Business-Unit-for-Gaokao/codegen-bot) | public | Java | 2026-07-09 | Code generation helper scripts for gaokao projects |
-| [`gaokao-plans-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-plans-crawler) | public | Python | 2026-07-01 | Generated crawler repo for plans |
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | Python | 2026-06-02 | 无描述 |
 | [`gaokao-tool`](https://github.com/Business-Unit-for-Gaokao/gaokao-tool) | private | Python | 2026-06-10 | 无描述 |
 | [`gaokao-universities-data`](https://github.com/Business-Unit-for-Gaokao/gaokao-universities-data) | private | Shell | 2026-06-10 | 全国2919所高校基础数据库 + 详情采集器 + 小红书内容生成器 |
@@ -104,7 +104,6 @@ _当前无 live 仓库。_
 | [`gaokao-data-json`](https://github.com/Business-Unit-for-Gaokao/gaokao-data-json) | private | - | 2026-10-01 | Gaokao JSON data snapshots consolidated from crawler repositories |
 | [`gaokao-knowledge-base`](https://github.com/Business-Unit-for-Gaokao/gaokao-knowledge-base) | private | Python | 2026-09-06 | 高考志愿咨询 Obsidian 知识库 |
 | [`gaokao-landing`](https://github.com/Business-Unit-for-Gaokao/gaokao-landing) | private | HTML | 2026-06-10 | 高考宣传页 |
-| [`gaokao-plans-crawler`](https://github.com/Business-Unit-for-Gaokao/gaokao-plans-crawler) | public | Python | 2026-07-01 | Generated crawler repo for plans |
 | [`gaokao-salary`](https://github.com/Business-Unit-for-Gaokao/gaokao-salary) | public | JavaScript | 2026-04-12 | 高考专业薪资 |
 | [`gaokao-scheduler`](https://github.com/Business-Unit-for-Gaokao/gaokao-scheduler) | private | Python | 2026-06-02 | 无描述 |
 | [`gaokao-teacher-package`](https://github.com/Business-Unit-for-Gaokao/gaokao-teacher-package) | private | HTML | 2026-06-29 | 无描述 |
@@ -122,10 +121,10 @@ _当前无 live 仓库。_
 | [`uni-app-gaokao`](https://github.com/Business-Unit-for-Gaokao/uni-app-gaokao) | private | Vue | 2026-06-09 | FutureTech高考uniapp端 |
 | [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai) | public | HTML | 2026-07-01 | 学职平台独立爬虫：专业与职业数据采集 |
 | [`yangguanggaokao`](https://github.com/Business-Unit-for-Gaokao/yangguanggaokao) | public | HTML | 2026-06-09 | 阳光高考专业信息爬虫 - 爬取高校专业目录、详细介绍、开设院校等数据 |
-| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | 掌上高考 crawler factory |
+| [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao) | public | Python | 2026-10-02 | 掌上高考 crawler factory; plans collector consolidated |
 | [`Zhangxuefeng-AI-gaokao`](https://github.com/Business-Unit-for-Gaokao/Zhangxuefeng-AI-gaokao) | public | - | 2026-04-23 | 本项目是一个基于“本地知识库 + 向量引擎(Qdrant) + 大语言模型”构建的开源高考志愿咨询系统。为打破技术壁垒，让完全不懂代码的电脑小白也能享受到 AI 的时代红利，项目在最新版本中独家加入了【傻瓜式一键配置脚手架】。用户告别了极其繁琐的环境配置，只需点击一次，电脑就会自动下载和部署包含数据库在内的全部环境。 |
 | [`zhonggaokao`](https://github.com/Business-Unit-for-Gaokao/zhonggaokao) | private | HTML | 2026-07-17 | 无描述 |
 
 ---
 
-_Last updated: 2026-07-03; live inventory: 30 repositories._
+_Last updated: 2026-10-02; live inventory: 29 repositories._

@@ -24,7 +24,7 @@
 
 - [`xuezhipingtai`](https://github.com/Business-Unit-for-Gaokao/xuezhipingtai)：学职平台 / XZ。
 - [`sunshinegaokao`](https://github.com/Business-Unit-for-Gaokao/sunshinegaokao)：阳光高考 / CHSI。
-- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn。
+- [`zhangshanggaokao`](https://github.com/Business-Unit-for-Gaokao/zhangshanggaokao)：掌上高考 / gaokao.cn。 (includes the consolidated admission-plans collector)
 
 完整实时仓库清单见 [`docs/repository-map.md`](https://github.com/Business-Unit-for-Gaokao/.github/blob/main/docs/repository-map.md)。组织 Project 只跟踪当前 live 仓库；已删除、迁移或合并后的仓库不保留项目卡片。
 
@@ -37,4 +37,4 @@
 
 ---
 
-_Last updated: 2026-10-02; live inventory: 30 repositories._
+_Last updated: 2026-10-02; live inventory: 29 repositories._
